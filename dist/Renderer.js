@@ -1,11 +1,10 @@
 class Renderer {
     constructor(){
-
+        this.source = $(`#recipes-template`).html()
+        this.template = Handlebars.compile(this.source)
     }
-    render(data) {
-        const source = $(`#recipes-template`).html()
-        const template = Handlebars.compile(source)
-        const newHTML = template({ recipe:data })
+    render(recipes) {
+        const newHTML = this.template({ recipe:recipes })
         $(`#recipes`).empty().append(newHTML)
     }
 }

@@ -12,8 +12,8 @@ body {
 #recipes {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
 .recipe {
@@ -22,22 +22,28 @@ body {
     min-height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-items: center;
     border: 1px solid black;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 5px 5px 5px black;
 }
 .title {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
+.recipe-thumbnail {
+    display: flex;
+    justify-content: center;
+}
+
 .recipe-thumbnail>img{
     height: 120px;
     width: 100px;
-    flex:4;
-    border-radius: 95%;
+    border-radius: 15%;
 }
 
 
 .ingredients {
     flex:5;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

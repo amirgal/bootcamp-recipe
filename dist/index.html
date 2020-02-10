@@ -17,12 +17,12 @@
     <script id="recipes-template" type="text/x-handlebars-template">
         {{#each recipe}}
         <div class="recipe">
-            <a class="title" href="{{href}}">{{title}}</a>
+            <a class="title" target="_blank" rel="noopener noreferrer" href="{{href}}"><h3>{{title}}</h3></a>
             <div class="recipe-thumbnail">
                 <img src="{{thumbnail}}">
             </div>
             <ul class="ingredients">
-                Ingredients:
+                <h4>Ingredients:</h4><br>
                 {{#each this.ingredients}}
                     <li class="ingredient">{{this}}</li>
                 {{/each}}
