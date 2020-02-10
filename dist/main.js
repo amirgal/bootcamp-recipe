@@ -6,3 +6,8 @@ const bringRecipes = function () {
         renderer.render(response)
     })
 }
+
+$('#recipes').on('click','img',function() {
+    console.log($(this).closest('.recipe').find('li')[0].innerText);
+    
+})

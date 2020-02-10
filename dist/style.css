@@ -1,6 +1,6 @@
 body {
     background-color: lightgray;
-    width: 99vw;
+    width: 98vw;
 }
 #search-bar {
     display: flex;
@@ -18,12 +18,15 @@ body {
 
 .recipe {
     background-color: lightsalmon;
-    height: 500px;
+    height: 450px;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px black;
 }
 .title {
-    /* flex: 1; */
     margin-bottom: 10px;
 }
 .recipe-thumbnail>img{
@@ -31,13 +34,10 @@ body {
     width: 100px;
     flex:4;
     border-radius: 95%;
-    justify-items: center;
 }
 
+
 .ingredients {
-    flex:6;
-    
-}
-li {
+    flex:5;
     
 }
