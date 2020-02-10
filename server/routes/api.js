@@ -9,8 +9,8 @@ router.get('/sanity',(req,res) => {
 
 router.get('/recipes/:ingredient',(req,res) => {
     request(`https://recipes-goodness.herokuapp.com/recipes/${req.params.ingredient}`, (error,result) => {
-        const recipes = JSON.parse(result.body).results
-        recipes.map(recipe => {recipe.title, recipe.href, recipe.thumbnail, recipe.ingredients})
+        let recipes = JSON.parse(result.body).results
+        recipes = recipes.map(recipe => {return {title: recipe.title, href: recipe.href, thumbnail: recipe.thumbnail, ingredients: recipe.ingredients}})
         res.send(recipes)
     })
 })
